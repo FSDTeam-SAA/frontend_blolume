@@ -52,12 +52,12 @@ export default function Header() {
                 alt="logo"
                 width={500}
                 height={300}
-                className="w-[170px] h-[40px] lg:w-[240px] lg:h-[60px] object-contain"
+                className="w-[170px] h-[40px] lg:w-[200px] lg:h-[50] xl:w-[240px] xl:h-[60px] object-contain"
               />
             </Link>
           </motion.div>
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-6 xl:space-x-10 flex-1 justify-center">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-10 flex-1 justify-center ml-5">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -68,7 +68,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`text-sm xl:text-[22px] font-normal duration-300 relative group whitespace-nowrap overflow-hidden ${
+                  className={`text-[18px] 2xl:text-[22px] font-normal duration-300 relative group whitespace-nowrap overflow-hidden ${
                     isActive(item.href)
                       ? "text-cyan-400 text-lg xl:text-[26px]"
                       : "text-[#FFFFFF] hover:text-cyan-400"
