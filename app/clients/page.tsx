@@ -2,12 +2,18 @@ import React from "react";
 import Sub_banner from "./_component/Sub_banner";
 import Client_About from "./_component/Client_About";
 import Logoshowcase from "./_component/Logoshowcase";
+import Hero from "@/components/web/Hero";
 // import { Particles } from "@/components/magicui/particles";
 
 const page = () => {
   return (
     <div>
-      <Sub_banner
+      {/* <Sub_banner
+        vedieoLink="/asset/banner4.mp4"
+        title="OUR CLIENTS"
+        description=""
+      /> */}
+      <Hero
         vedieoLink="/asset/banner4.mp4"
         title="OUR CLIENTS"
         description=""
