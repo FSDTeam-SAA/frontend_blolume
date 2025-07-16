@@ -25,13 +25,8 @@ export default function Home() {
         <AnimatePresence mode="wait">
           {!showHero ? (
             <motion.div
-              key="video"
               className={`relative w-full h-[500px] lg:h-[724px]
                overflow-hidden`}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.01 }}
             >
               <video
                 className="w-full h-full object-cover"
@@ -44,12 +39,7 @@ export default function Home() {
               </video>
             </motion.div>
           ) : (
-            <motion.div
-              key="hero"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1 }}
-            >
+            <motion.div>
               <ParticleHero
                 btnText="Contact Us"
                 title="Lighting with Purpose and Precision"
