@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -174,12 +175,14 @@ export default function ParticleHero({ title, description, btnText }: Props) {
             whileTap={{ scale: 0.95 }}
           >
             {btnText && (
-              <Button
-                size="lg"
-                className="border bg-transparent hover:bg-transparent border-[white] text-base font-normal px-[32px] h-[51px] relative group"
-              >
-                <span className="relative z-10">{btnText}</span>
-              </Button>
+              <Link href={"/about"}>
+                <Button
+                  size="lg"
+                  className="border bg-transparent hover:bg-transparent border-[white] text-base font-normal px-[32px] h-[51px] relative group"
+                >
+                  <span className="relative z-10">{btnText}</span>
+                </Button>
+              </Link>
             )}
           </motion.div>
         </div>
